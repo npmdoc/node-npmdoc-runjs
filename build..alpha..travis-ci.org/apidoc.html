@@ -1,0 +1,895 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/pawelgalazka/runjs#readme"
+
+    >runjs (v3.2.1)</a>
+</h1>
+<h4>Minimalistic building tool</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.runjs">module runjs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.ask">
+            function <span class="apidocSignatureSpan">runjs.</span>ask
+            <span class="apidocSignatureSpan">(question)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.generate">
+            function <span class="apidocSignatureSpan">runjs.</span>generate
+            <span class="apidocSignatureSpan">(src, dst, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.run">
+            function <span class="apidocSignatureSpan">runjs.</span>run
+            <span class="apidocSignatureSpan">(command)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">runjs.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">runjs.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">runjs.</span>script</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">runjs.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.runjs.common">module runjs.common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.common.RunJSError">
+            function <span class="apidocSignatureSpan">runjs.common.</span>RunJSError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.runjs.logger">module runjs.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.logger.debug">
+            function <span class="apidocSignatureSpan">runjs.logger.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.logger.error">
+            function <span class="apidocSignatureSpan">runjs.logger.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.logger.info">
+            function <span class="apidocSignatureSpan">runjs.logger.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.logger.log">
+            function <span class="apidocSignatureSpan">runjs.logger.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.logger.warning">
+            function <span class="apidocSignatureSpan">runjs.logger.</span>warning
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.runjs.script">module runjs.script</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.call">
+            function <span class="apidocSignatureSpan">runjs.script.</span>call
+            <span class="apidocSignatureSpan">(obj, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.config">
+            function <span class="apidocSignatureSpan">runjs.script.</span>config
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.decorate">
+            function <span class="apidocSignatureSpan">runjs.script.</span>decorate
+            <span class="apidocSignatureSpan">(obj, logger, namespace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.describe">
+            function <span class="apidocSignatureSpan">runjs.script.</span>describe
+            <span class="apidocSignatureSpan">(obj, logger, namespace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.hasAccess">
+            function <span class="apidocSignatureSpan">runjs.script.</span>hasAccess
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.load">
+            function <span class="apidocSignatureSpan">runjs.script.</span>load
+            <span class="apidocSignatureSpan">(runfilePath, config, logger, requirer, access)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.script.requirer">
+            function <span class="apidocSignatureSpan">runjs.script.</span>requirer
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.runjs.utils">module runjs.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.runjs.utils.RunJSError">
+            function <span class="apidocSignatureSpan">runjs.utils.</span>RunJSError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">runjs.utils.</span>logger</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.runjs" id="apidoc.module.runjs">module runjs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.ask" id="apidoc.element.runjs.ask">
+        function <span class="apidocSignatureSpan">runjs.</span>ask
+        <span class="apidocSignatureSpan">(question)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ask(question) {
+  var readlineInterface = _readline2.default.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      try {
+        readlineInterface.question(question + &#x27; &#x27;, function (answer) {
+          resolve(answer);
+          readlineInterface.close();
+        });
+      } catch (error) {
+        reject(error);
+        readlineInterface.close();
+      }
+    }, 0);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.generate" id="apidoc.element.runjs.generate">
+        function <span class="apidocSignatureSpan">runjs.</span>generate
+        <span class="apidocSignatureSpan">(src, dst, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generate(src, dst, context) {
+  console.log(&#x27;Generating &#x27; + dst + &#x27; from template &#x27; + src);
+  var templateString = _fs2.default.readFileSync(src);
+  var content = (0, _lodash2.default)(templateString)(context);
+  _fs2.default.writeFileSync(dst, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.run" id="apidoc.element.runjs.run">
+        function <span class="apidocSignatureSpan">runjs.</span>run
+        <span class="apidocSignatureSpan">(command)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run(command) {
+  var options = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+  var logger = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : loggerAlias;
+
+  var binPath = _path2.default.resolve(&#x27;./node_modules/.bin&#x27;);
+
+  // Pick relevant option keys and set default values
+  options = {
+    env: options.env || process.env,
+    cwd: options.cwd,
+    async: !!options.async,
+    stdio: options.stdio || &#x27;inherit&#x27;,
+    timeout: options.timeout,
+    shell: true
+  };
+
+  // Include in PATH node_modules bin path
+  options.env.PATH = [binPath, options.env.PATH || process.env.PATH].join(_path2.default.delimiter);
+
+  logger.info(command);
+
+  // Handle async call
+  if (options.async) {
+    return runAsync(command, options);
+  }
+
+  // Handle sync call by default
+  return runSync(command, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.runjs.common" id="apidoc.module.runjs.common">module runjs.common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.common.RunJSError" id="apidoc.element.runjs.common.RunJSError">
+        function <span class="apidocSignatureSpan">runjs.common.</span>RunJSError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RunJSError(message) {
+  this.name = &#x27;RunJSError&#x27;;
+  this.message = message &#x26;&#x26; message.split(&#x27;\n&#x27;)[0]; // assign only first line
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+try {
+  var buffer = _child_process2.default.execSync(command, options);
+  if (buffer) {
+    return buffer.toString();
+  }
+  return buffer;
+} catch (error) {
+  throw new _common.<span class="apidocCodeKeywordSpan">RunJSError</span>(error.message);
+}
+}
+
+function runAsync(command, options) {
+return new Promise(function (resolve, reject) {
+  var asyncProcess = _child_process2.default.spawn(command, options);
+  var output = null;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.runjs.logger" id="apidoc.module.runjs.logger">module runjs.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.logger.debug" id="apidoc.element.runjs.logger.debug">
+        function <span class="apidocSignatureSpan">runjs.logger.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  console.log(_chalk2.default.blue.apply(_chalk2.default, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  nextArgs.push(options);
+}
+return nextArgs;
+}
+
+function describe(obj, logger, namespace) {
+if (!namespace) {
+  logger.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Available tasks:&#x27;);
+}
+
+Object.keys(obj).forEach(function (key) {
+  var value = obj[key];
+  var nextNamespace = namespace ? namespace + &#x27;:&#x27; + key : key;
+  var doc = value.doc;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.logger.error" id="apidoc.element.runjs.logger.error">
+        function <span class="apidocSignatureSpan">runjs.logger.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error() {
+  console.error(_chalk2.default.red.apply(_chalk2.default, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    let decoratedRunfile = script.decorate(runfile, api.logger)
+    script.call(decoratedRunfile, ARGV)
+  } else {
+    script.describe(runfile, api.logger)
+  }
+} catch (error) {
+  if (error instanceof common.RunJSError) {
+    api.logger.<span class="apidocCodeKeywordSpan">error</span>(error.message)
+    process.exit(1)
+  } else {
+    throw error
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.logger.info" id="apidoc.element.runjs.logger.info">
+        function <span class="apidocSignatureSpan">runjs.logger.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function info() {
+  console.log(_chalk2.default.bold.apply(_chalk2.default, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  timeout: options.timeout,
+  shell: true
+};
+
+// Include in PATH node_modules bin path
+options.env.PATH = [binPath, options.env.PATH || process.env.PATH].join(_path2.default.delimiter);
+
+logger.<span class="apidocCodeKeywordSpan">info</span>(command);
+
+// Handle async call
+if (options.async) {
+  return runAsync(command, options);
+}
+
+// Handle sync call by default
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.logger.log" id="apidoc.element.runjs.logger.log">
+        function <span class="apidocSignatureSpan">runjs.logger.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log() {
+  var _console;
+
+  (_console = console).log.apply(_console, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Handling arguments
+
+Provided arguments in the command line are passed to the function:
+
+
+```javascript
+export function sayHello (who) {
+  console.<span class="apidocCodeKeywordSpan">log</span>(`Hello ${who}!`)
+}
+```
+
+    $ run sayHello world
+    Hello world!
+
+You can also provide dash arguments like `-a` or `--test`. Order of them doesn&#x27;t matter
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.logger.warning" id="apidoc.element.runjs.logger.warning">
+        function <span class="apidocSignatureSpan">runjs.logger.</span>warning
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function warning() {
+  console.warn(_chalk2.default.yellow.apply(_chalk2.default, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.runjs.script" id="apidoc.module.runjs.script">module runjs.script</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.call" id="apidoc.element.runjs.script.call">
+        function <span class="apidocSignatureSpan">runjs.script.</span>call
+        <span class="apidocSignatureSpan">(obj, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function call(obj, args) {
+  var depth = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : 0;
+
+  var taskName = args[0];
+
+  if (typeof obj[taskName] === &#x27;function&#x27;) {
+    obj[taskName].apply(null, parseArgs(args.slice(1)));
+    return obj[taskName];
+  }
+
+  var namespaces = taskName.split(&#x27;:&#x27;);
+  var rootNamespace = namespaces.shift();
+  var nextTaskName = namespaces.join(&#x27;:&#x27;);
+  var nextArgs = args.slice();
+  nextArgs[0] = nextTaskName;
+
+  if (obj[rootNamespace]) {
+    var calledTask = call(obj[rootNamespace], nextArgs, depth + 1);
+    if (calledTask) {
+      return calledTask;
+    }
+  }
+
+  if (!depth) {
+    throw new _common.RunJSError(&#x27;Task &#x27; + taskName + &#x27; not found&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+try {
+const config = script.config(&#x27;./package.json&#x27;)
+const runfile = script.load(&#x27;./runfile&#x27;, config, api.logger, script.requirer, script.hasAccess)
+const ARGV = process.argv.slice(2)
+
+if (ARGV.length) {
+  let decoratedRunfile = script.decorate(runfile, api.logger)
+  script.<span class="apidocCodeKeywordSpan">call</span>(decoratedRunfile, ARGV)
+} else {
+  script.describe(runfile, api.logger)
+}
+} catch (error) {
+if (error instanceof common.RunJSError) {
+  api.logger.error(error.message)
+  process.exit(1)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.config" id="apidoc.element.runjs.script.config">
+        function <span class="apidocSignatureSpan">runjs.script.</span>config
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function config(filePath) {
+  var config = void 0;
+  try {
+    config = require(filePath).runjs || {};
+  } catch (error) {
+    config = {};
+  }
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#!/usr/bin/env node
+&#x27;use strict&#x27;
+const script = require(&#x27;../lib/script&#x27;)
+const api = require(&#x27;../lib/index&#x27;)
+const common = require(&#x27;../lib/common&#x27;)
+
+try {
+const config = script.<span class="apidocCodeKeywordSpan">config</span>(&#x27;./package.json&#x27;)
+const runfile = script.load(&#x27;./runfile&#x27;, config, api.logger, script.requirer, script.hasAccess)
+const ARGV = process.argv.slice(2)
+
+if (ARGV.length) {
+  let decoratedRunfile = script.decorate(runfile, api.logger)
+  script.call(decoratedRunfile, ARGV)
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.decorate" id="apidoc.element.runjs.script.decorate">
+        function <span class="apidocSignatureSpan">runjs.script.</span>decorate
+        <span class="apidocSignatureSpan">(obj, logger, namespace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decorate(obj, logger, namespace) {
+  var nextObj = {};
+  Object.keys(obj).forEach(function (key) {
+    var value = obj[key];
+    var nextNamespace = namespace ? namespace + &#x27;:&#x27; + key : key;
+
+    if (typeof value === &#x27;function&#x27;) {
+      nextObj[key] = function () {
+        var time = Date.now();
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        if (args.length) {
+          logger.debug(&#x27;Running &#x22;&#x27; + nextNamespace + &#x27;&#x22; with &#x27; + JSON.stringify(args) + &#x27;...&#x27;);
+        } else {
+          logger.debug(&#x27;Running &#x22;&#x27; + nextNamespace + &#x27;&#x22;...&#x27;);
+        }
+        value.apply(null, args);
+        time = ((Date.now() - time) / 1000).toFixed(2);
+        logger.debug(&#x27;Finished &#x22;&#x27; + nextNamespace + &#x27;&#x22; in &#x27; + time + &#x27; sec&#x27;);
+      };
+    }
+
+    if ((typeof value === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(value)) === &#x27;object&#x27;) {
+      nextObj[key] = decorate(value, logger, nextNamespace);
+    }
+  });
+  return nextObj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+try {
+const config = script.config(&#x27;./package.json&#x27;)
+const runfile = script.load(&#x27;./runfile&#x27;, config, api.logger, script.requirer, script.hasAccess)
+const ARGV = process.argv.slice(2)
+
+if (ARGV.length) {
+  let decoratedRunfile = script.<span class="apidocCodeKeywordSpan">decorate</span>(runfile, api.logger)
+  script.call(decoratedRunfile, ARGV)
+} else {
+  script.describe(runfile, api.logger)
+}
+} catch (error) {
+if (error instanceof common.RunJSError) {
+  api.logger.error(error.message)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.describe" id="apidoc.element.runjs.script.describe">
+        function <span class="apidocSignatureSpan">runjs.script.</span>describe
+        <span class="apidocSignatureSpan">(obj, logger, namespace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function describe(obj, logger, namespace) {
+  if (!namespace) {
+    logger.debug(&#x27;Available tasks:&#x27;);
+  }
+
+  Object.keys(obj).forEach(function (key) {
+    var value = obj[key];
+    var nextNamespace = namespace ? namespace + &#x27;:&#x27; + key : key;
+    var doc = value.doc;
+
+    if (typeof value === &#x27;function&#x27;) {
+      var funcParams = void 0;
+      try {
+        funcParams = (0, _getParameterNames2.default)(value);
+      } catch (error) {
+        funcParams = [];
+      }
+      var paramsDoc = funcParams.length ? &#x27;[&#x27; + funcParams.join(&#x27; &#x27;) + &#x27;]&#x27; : &#x27;&#x27;;
+      logger.info(&#x27;\n&#x27;, nextNamespace, paramsDoc);
+      if (doc) {
+        logger.log(&#x27;   &#x27; + doc);
+      }
+    } else if ((typeof value === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(value)) === &#x27;object&#x27;) {
+      describe(value, logger, nextNamespace);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const runfile = script.load(&#x27;./runfile&#x27;, config, api.logger, script.requirer, script.hasAccess)
+const ARGV = process.argv.slice(2)
+
+if (ARGV.length) {
+  let decoratedRunfile = script.decorate(runfile, api.logger)
+  script.call(decoratedRunfile, ARGV)
+} else {
+  script.<span class="apidocCodeKeywordSpan">describe</span>(runfile, api.logger)
+}
+} catch (error) {
+if (error instanceof common.RunJSError) {
+  api.logger.error(error.message)
+  process.exit(1)
+} else {
+  throw error
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.hasAccess" id="apidoc.element.runjs.script.hasAccess">
+        function <span class="apidocSignatureSpan">runjs.script.</span>hasAccess
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasAccess(filePath) {
+  return _fs2.default.accessSync(_path2.default.resolve(filePath));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.load" id="apidoc.element.runjs.script.load">
+        function <span class="apidocSignatureSpan">runjs.script.</span>load
+        <span class="apidocSignatureSpan">(runfilePath, config, logger, requirer, access)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(runfilePath, config, logger, requirer, access) {
+  // try to load babel-register
+  try {
+    logger.log(&#x27;Requiring babel-register...&#x27;);
+    if (config[&#x27;babel-register&#x27;]) {
+      requirer(config[&#x27;babel-register&#x27;]);
+    } else {
+      requirer(&#x27;./node_modules/babel-register&#x27;);
+    }
+  } catch (error) {
+    logger.log(&#x27;Requiring failed. Fallback to pure node.&#x27;);
+    if (config[&#x27;babel-register&#x27;]) {
+      throw error;
+    }
+  }
+
+  // process runfile.js
+  logger.log(&#x27;Processing runfile...&#x27;);
+
+  try {
+    access(runfilePath + &#x27;.js&#x27;);
+  } catch (error) {
+    throw new _common.RunJSError(&#x27;No &#x27; + runfilePath + &#x27;.js defined in &#x27; + process.cwd());
+  }
+
+  var runfile = requirer(runfilePath);
+  if (runfile.default) {
+    return runfile.default;
+  }
+  return runfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x27;use strict&#x27;
+const script = require(&#x27;../lib/script&#x27;)
+const api = require(&#x27;../lib/index&#x27;)
+const common = require(&#x27;../lib/common&#x27;)
+
+try {
+const config = script.config(&#x27;./package.json&#x27;)
+const runfile = script.<span class="apidocCodeKeywordSpan">load</span>(&#x27;./runfile&#x27;, config, api.logger, script.requirer
+, script.hasAccess)
+const ARGV = process.argv.slice(2)
+
+if (ARGV.length) {
+  let decoratedRunfile = script.decorate(runfile, api.logger)
+  script.call(decoratedRunfile, ARGV)
+} else {
+  script.describe(runfile, api.logger)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.script.requirer" id="apidoc.element.runjs.script.requirer">
+        function <span class="apidocSignatureSpan">runjs.script.</span>requirer
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requirer(filePath) {
+  return require(_path2.default.resolve(filePath));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.runjs.utils" id="apidoc.module.runjs.utils">module runjs.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.runjs.utils.RunJSError" id="apidoc.element.runjs.utils.RunJSError">
+        function <span class="apidocSignatureSpan">runjs.utils.</span>RunJSError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RunJSError(message) {
+  this.name = &#x27;RunJSError&#x27;;
+  this.message = message &#x26;&#x26; message.split(&#x27;\n&#x27;)[0]; // assign only first line
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+try {
+  var buffer = _child_process2.default.execSync(command, options);
+  if (buffer) {
+    return buffer.toString();
+  }
+  return buffer;
+} catch (error) {
+  throw new _common.<span class="apidocCodeKeywordSpan">RunJSError</span>(error.message);
+}
+}
+
+function runAsync(command, options) {
+return new Promise(function (resolve, reject) {
+  var asyncProcess = _child_process2.default.spawn(command, options);
+  var output = null;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
